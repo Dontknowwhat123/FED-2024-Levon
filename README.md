@@ -19,7 +19,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Levon van de Velde
 
   #### Je startniveau:
-  Rood
+  Zwart
 
   #### Je focus:
   Responsive
