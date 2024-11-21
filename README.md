@@ -88,7 +88,9 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <summary>uitwerken voor 1<sup>e</sup> voortgang</summary>
 
   ### Stand van zaken
-  hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+  Deze week was niet erg lastig. 
+  Alle oefeningen met grids, flexbox en javascript lukte me wel.
+  Het enige wat ik nog lastig vindt is alles semantisch maken met html.
 
 
   ### Agenda voor meeting
@@ -102,12 +104,8 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
 
   ### Verslag van meeting
-  hier na afloop snel de uitkomsten van de meeting vastleggen
-
-  - punt 1
-  - punt 2
-  - nog een punt
-  - ...
+  Ik heb geleerd hoe je sections en articles opstelt en het verschil daarvan.
+  Ook heb ik geleerd dat je een img kan doen in een h1.
 
 </details>
 
