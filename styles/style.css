@@ -113,10 +113,10 @@ header ul li:nth-child(n+5) {
 header ul li:nth-child(5) {
 	display: flex;
 	justify-content: space-between;
+	align-items: center;
 }
 
 header ul li:nth-child(5) img {
-	transform: rotate(45deg);
 	width: auto;
 	height: 1em;
 }
