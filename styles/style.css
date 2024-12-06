@@ -139,6 +139,90 @@ header nav ul li img {
 	width: 1em;
 }
 
+
+
+/* main */
+main {
+  margin: 0 auto;
+  padding: 0 4px;
+  width: 100%;
+}
+
+main section article {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  padding: 1em 0.5em;
+}
+
+main section article h2 {
+  padding: 1em 0;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+main section article p {
+  margin-bottom: 19px;
+  padding: 0 4px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: -.15px;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+main section:first-of-type article {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(2) {
+  margin: 0 auto;
+  display: flex;
+  overflow: visible;
+}
+
+main section:nth-of-type(2) article p {
+  font-size: 1pc;
+}
+
+main section img {
+  width: 100%;
+}
+
+main section article button {
+  background-color: #ffbc0d;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  width: 9rem;
+  height: 3rem;
+  margin: 0 .75rem;
+  font-size: 14px;
+  font-weight: 200;
+}
+
+main section:nth-of-type(2) {
+  flex-direction: column;
+}
+
+main section:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:last-of-type {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Footer */
+
+footer nav ul {
+  list-style: none;
+}
+
+
 /*************************/
 /* RESPONSIVE STYLING    */
 /*************************/
@@ -230,8 +314,33 @@ header nav ul li img {
   }
 
   /* main */
+  main {
+    width: 1170px;
+  }
+
   main section:nth-of-type(2) article {
     width: 50%;
+  }
+
+  main section:nth-of-type(2) {
+    flex-direction: row;
+  }
+
+  main section:nth-child(3) article {
+    width: 50%;
+  }
+
+  main section:nth-child(3) {
+    display: flex;
+    flex-direction: row;
+  }
+
+  main section:last-of-type article {
+    width: 50%;
+  }
+
+  main section:last-of-type {
+    display: flex;
     flex-direction: row;
   }
 
@@ -239,7 +348,6 @@ header nav ul li img {
   /* footer */
   footer {
     display: flex;
-    justify-content: center;
     padding-top: 1em;
     background: var(--color-background);    
     width: 1170px;
@@ -249,51 +357,17 @@ header nav ul li img {
 
   footer nav {
     grid-template-columns: auto;
-    justify-content: space-around;
+    justify-content: space-between;
 	  display: flex;
     position: relative;
     translate: unset;
-    padding: 0;
+    padding: 0 1em;
     flex-direction: row;
+    align-content: flex-start;
+
   }
 
   footer img{
     width: 2em;
   }
-}
-
-/* main */
-main {
-  margin: 0 auto;
-  padding: 0 4px;
-  padding-top: 50px;
-}
-
-main section article {
-  padding-top: 1em;
-}
-
-main section:first-of-type article {
-  display: flex;
-  flex-direction: column;
-}
-
-main section:nth-of-type(2) {
-  margin: 0 auto;
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  overflow: visible;
-
-}
-
-main section:nth-of-type(n+2) article {
-  display: flex;
-  width: 100%;
-  flex-direction: column;
-  padding: 1em 0.5em;
-}
-
-main section img {
-  width: 100%;
 }
