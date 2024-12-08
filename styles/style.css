@@ -28,7 +28,7 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: space-between;
   position: sticky;
   top: 0;
   background-color: var(--color-background);
@@ -218,15 +218,148 @@ main section:last-of-type {
 
 /* Footer */
 
-footer nav ul {
-  list-style: none;
+footer {
+  display: none;
 }
 
+/* tweede pagina */
+
+.mccrispy {
+  display: flex;
+  justify-content: center;
+  max-width: 1170px;
+  margin: 0 auto;
+  padding-left: 9px;
+  padding-right: 9px;
+  flex-direction: column;
+  padding-top: 50px ;
+  overflow: hidden;
+  align-content: center;
+}
+
+.mccrispy article img {
+  margin: 40px 0;
+  vertical-align: middle;
+  max-width: 100%;
+}
+
+.mccrispy article h1 {
+  font-size: 36px;
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.mccrispy article p:first-of-type {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 24px;
+  text-align: center;
+}
+
+.mccrispy article p:nth-of-type(2) {
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.mccrispy article  p:nth-of-type(3) {
+  padding-bottom: 1.5em;
+}
+
+.mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(4) {
+  font-size: 14px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.mccrispy article p:nth-of-type(5)  {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.mccrispy section p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.mccrispy form {
+  margin-top: 55px;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+}
+
+.mccrispy form label {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.mccrispy form label:first-of-type {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mccrispy form label input {
+  height: 1.5em;
+  font-size: 15px;
+  margin-top: 0.25em;
+  width: 350px;
+}
+
+.mccrispy form label:last-of-type {
+  padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mccrispy form button {
+  background-color: #ffbc0d;
+  width: 9em;
+  height: 3em;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 14px;
+  margin-top: 1em;
+  justify-self: center;
+}
 
 /*************************/
 /* RESPONSIVE STYLING    */
 /*************************/
-@media (min-width: 1070px) {
+@media (min-width: 700px) {
+  main section:nth-of-type(2), main section:nth-of-type(3) {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 950px) {
+  main section:nth-of-type(4) {
+    flex-direction: row;
+  }  
+  
+  .mccrispy article {
+    grid-template-columns: 40% 1fr;
+  }
+
+  .mccrispy form {
+    margin-left: 25%;
+  }
+}
+
+
+@media (min-width: 1000px) {
   header {
     display: grid;
     width: 100%;
@@ -245,6 +378,7 @@ footer nav ul {
     padding: 0;
     margin-bottom: 1em;
     margin: 0 auto;
+    grid-template-columns: 1fr 1fr;
   }
 
   header h1 a img {
@@ -253,7 +387,7 @@ footer nav ul {
   }
 
   header nav ul:first-of-type {
-    grid-column: 1/1;
+    grid-column: 1/2;
     grid-row: 1/1;
     display: flex;
     flex-direction: row;
@@ -261,7 +395,7 @@ footer nav ul {
   }
 
   header nav ul:nth-of-type(2) {
-    grid-column: 1/1;
+    grid-column: 1/-1;
     grid-row: 2/2;
     display: flex;
     flex-direction: row;
@@ -315,10 +449,10 @@ footer nav ul {
 
   /* main */
   main {
-    width: 1170px;
+    max-width: 1170px;
   }
 
-  main section:nth-of-type(2) article {
+  main section:nth-of-type(2) article,  main section:nth-child(3) article, main section:last-of-type article {
     width: 50%;
   }
 
@@ -326,17 +460,9 @@ footer nav ul {
     flex-direction: row;
   }
 
-  main section:nth-child(3) article {
-    width: 50%;
-  }
-
   main section:nth-child(3) {
     display: flex;
     flex-direction: row;
-  }
-
-  main section:last-of-type article {
-    width: 50%;
   }
 
   main section:last-of-type {
@@ -346,28 +472,45 @@ footer nav ul {
 
 
   /* footer */
-  footer {
-    display: flex;
-    padding-top: 1em;
-    background: var(--color-background);    
-    width: 1170px;
-    margin: 0 auto;
-    flex-direction: column;
-  }
 
-  footer nav {
-    grid-template-columns: auto;
-    justify-content: space-between;
-	  display: flex;
-    position: relative;
-    translate: unset;
-    padding: 0 1em;
-    flex-direction: row;
-    align-content: flex-start;
+  .mccrispy {
+    width: 1070px;
 
   }
 
-  footer img{
-    width: 2em;
+  .mccrispy article {
+    display: grid;
+    grid-template-columns: 75% 1fr;
   }
+
+  .mccrispy article h1 {
+    text-align: left;
+    align-self: center;
+    display: block;
+    grid-column: 2/3;
+  }
+
+  .mccrispy article p {
+    text-align: left;
+    grid-column: 2/3;
+  }
+
+  .mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(2), .mccrispy article p:nth-of-type(1) {
+    margin-top: 1em;
+    text-align: left;
+  }
+
+  .mccrispy article img {
+    align-self: flex-start;
+    grid-column: 1/1;
+    grid-row: 1/6;
+    flex: 1 1 67%;
+  }
+
+  .mccrispy form {
+    width: 450px;
+    margin-left: 25%;
+  }
+
 }
+
