@@ -44,7 +44,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
 
   #### Screenshot(s) van de tweede pagina (small screen):
   McCrispy Voordeelmenu pagina
-  <img src="readme-images/pagina-2.jpeg" width="375px" alt="De pagina voor een McCrispy Voordeelmenu">
+  <img src="readme-images/Pagina-2.jpeg" width="375px" alt="De pagina voor een McCrispy Voordeelmenu">
  
 </details>
 
@@ -73,7 +73,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   <img src="readme-images/lets-go.jpg" width="375px" alt="breakdown van de hele pagina">
 
   ### dynamisch deel: 
-  <img src="readme-images/menutjes.jpg." width="375px" alt="breakdown van de hamburger menu">
+  <img src="readme-images/menutjes.jpg" width="375px" alt="breakdown van de hamburger menu">
 
 
 </details>
@@ -169,7 +169,7 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   Ik heb geleerd hoe ik met grid en flexbox een mooie en professionele ontwerp kan maken voor een website. Ook heb ik geleerd hoe ik semantische code schrijf en hoe ik een webpagina responsive kan maken voor verschillende soorten schermen.
   Als laatste heb ik geleerd hoe ik op een simpele manier een hamburger menu kan maken en die koppelen met een button door middel van javascript.
 
-  <img src="readme-images/Grid-navbar" width="375px" alt="top">
+  <img src="readme-images/Grid-navbar.png" width="375px" alt="top">
 
 
   ### Dit was lastig/Is niet gelukt:
