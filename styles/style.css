@@ -148,6 +148,9 @@ main {
   width: 100%;
 }
 
+main section img {
+  width: 100%;
+}
 main section article {
   padding-top: 50px;
   margin-bottom: 50px;
@@ -158,6 +161,22 @@ main section article h2 {
   padding: 1em 0;
   margin-left: .75rem;
   margin-right: .75rem;
+}
+
+main section article a {
+  background-color: #ffbc0d;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  width: 10em;
+  height: 3em;
+  margin: 0 .75rem;
+  font-size: 14px;
+  font-weight: 200;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 1em;
 }
 
 main section article p {
@@ -180,35 +199,11 @@ main section:nth-of-type(2) {
   margin: 0 auto;
   display: flex;
   overflow: visible;
+  flex-direction: column;
 }
 
 main section:nth-of-type(2) article p {
   font-size: 1pc;
-}
-
-main section img {
-  width: 100%;
-}
-
-main section article a {
-  background-color: #ffbc0d;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  width: 10em;
-  height: 3em;
-  margin: 0 .75rem;
-  font-size: 14px;
-  font-weight: 200;
-  text-decoration: none;
-
-  display: flex;
-  align-items: center;
-  padding: 1em;
-}
-
-main section:nth-of-type(2) {
-  flex-direction: column;
 }
 
 main section:nth-child(3) {
@@ -219,12 +214,6 @@ main section:nth-child(3) {
 main section:last-of-type {
   display: flex;
   flex-direction: column;
-}
-
-/* Footer */
-
-footer {
-  display: none;
 }
 
 /* tweede pagina */
@@ -474,9 +463,6 @@ footer {
     display: flex;
     flex-direction: row;
   }
-
-
-  /* footer */
 
   .mccrispy {
     width: 1070px;
