@@ -416,18 +416,24 @@ main section:last-of-type {
   line-height: 24px;
 }
 
+.mccrispy > div {
+  display: flex;
+  justify-content: center;
+}
+
 .mccrispy form {
   margin-top: 55px;
   margin-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
+  padding: 1em 2em;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: rgb(231, 231, 231);
   width: 100%;
+}
+
+.mccrispy form h2 {
+  width: fit-content;
 }
 
 .mccrispy form label {
@@ -506,13 +512,9 @@ main section:last-of-type {
   .mccrispy img:first-of-type {
     display: unset;
   }
+
   .mccrispy img:last-of-type {
     display: none;
-  }
-
-  .mccrispy form {
-    width: 450px;
-    margin-left: 25%;
   }
 }
 
@@ -528,5 +530,11 @@ main section:last-of-type {
 @media (min-width: 1070px) {
   .mccrispy {
     width: 1070px;
+  }
+}
+
+@media (min-width: 745px) {
+  .mccrispy form {
+    width: unset;
   }
 }
