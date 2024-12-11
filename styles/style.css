@@ -39,11 +39,15 @@ header {
   box-shadow: 0 .0625rem .5rem 0 rgba(0,0,0,.04),0 .0625rem .3125rem 0 rgba(0,0,0,.04);
 }
 
-header h1 a img {
+header > a > h1 img {
   width: 1.5em;
 }
 
-header a > img {
+header > a > img {
+  width: 3em;
+}
+
+header > a img {
   transition: 1s;
 }
 
@@ -176,9 +180,12 @@ header nav ul li img {
     grid-template-columns: 1fr 1fr;
   }
 
-  header h1 a img {
+  header > a > h1 img {
     width: auto;
-    height: auto;
+  }
+  
+  header > a > img {
+    width: auto;
   }
 
   header nav ul:first-of-type {
