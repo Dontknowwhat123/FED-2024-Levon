@@ -17,6 +17,10 @@
   --color-text: #111;
   --color-background: #ffffff;
   --color-border: rgb(186, 186, 186);
+  --color-focus: rgb(189, 0, 23);
+}
+:focus {
+  outline: 3px solid var(--color-focus);
 }
 
 /****************/
@@ -37,6 +41,15 @@ header {
 
 header h1 a img {
   width: 1.5em;
+}
+
+header a > img {
+  transition: 1s;
+}
+
+header > a img:hover {
+  transition: 1s;
+  transform: rotate(360deg);
 }
 
 header > button {
@@ -63,16 +76,18 @@ header nav {
   position: fixed;
   gap: 1em;
   background-color: var(--color-background);
-  translate: 0% -100%;
+  translate: -100% 0%;
   left: 0;
   right: 0;
   top: 0;
   bottom: 0;
   padding-right: 1em;
+  transition: 0.3s;
 }
 
 header nav.toonMenu {
   translate: 0% 0%;
+  transition: 0.3s;
 }
 
 header nav div {
@@ -139,230 +154,16 @@ header nav ul li img {
 	width: 1em;
 }
 
-
-
-/* main */
-main {
-  margin: 0 auto;
-  padding: 0 4px;
-  width: 100%;
-}
-
-main section img {
-  width: 100%;
-}
-main section article {
-  padding-top: 50px;
-  margin-bottom: 50px;
-  padding: 1em 0.5em;
-}
-
-main section article h2 {
-  padding: 1em 0;
-  margin-left: .75rem;
-  margin-right: .75rem;
-}
-
-main section article a {
-  background-color: #ffbc0d;
-  color: black;
-  border: none;
-  border-radius: 4px;
-  width: 10em;
-  height: 3em;
-  margin: 0 .75rem;
-  font-size: 14px;
-  font-weight: 200;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  padding: 1em;
-}
-
-main section article p {
-  margin-bottom: 19px;
-  padding: 0 4px;
-  line-height: 24px;
-  font-size: 14px;
-  font-weight: 200;
-  letter-spacing: -.15px;
-  margin-left: .75rem;
-  margin-right: .75rem;
-}
-
-main section:first-of-type article {
-  display: flex;
-  flex-direction: column;
-}
-
-main section:nth-of-type(2) {
-  margin: 0 auto;
-  display: flex;
-  overflow: visible;
-  flex-direction: column;
-}
-
-main section:nth-of-type(2) article p {
-  font-size: 1pc;
-}
-
-main section:nth-child(3) {
-  display: flex;
-  flex-direction: column;
-}
-
-main section:last-of-type {
-  display: flex;
-  flex-direction: column;
-}
-
-/* tweede pagina */
-
-.mccrispy {
-  display: flex;
-  justify-content: center;
-  max-width: 1170px;
-  margin: 0 auto;
-  padding-left: 9px;
-  padding-right: 9px;
-  flex-direction: column;
-  padding-top: 50px ;
-  overflow: hidden;
-  align-content: center;
-}
-
-.mccrispy article img {
-  margin: 40px 0;
-  vertical-align: middle;
-  max-width: 100%;
-}
-
-.mccrispy article h1 {
-  font-size: 36px;
-  margin: 0 0 25px;
-  text-align: center;
-}
-
-.mccrispy article p:first-of-type {
-  font-size: 14px;
-  font-weight: 200;
-  line-height: 24px;
-  text-align: center;
-}
-
-.mccrispy article p:nth-of-type(2) {
-  font-size: 20px;
-  height: 24px;
-  line-height: 24px;
-  text-align: center;
-  font-weight: 200;
-}
-
-.mccrispy article  p:nth-of-type(3) {
-  padding-bottom: 1.5em;
-}
-
-.mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(4) {
-  font-size: 14px;
-  line-height: 24px;
-  font-weight: 300;
-  text-align: left;
-}
-
-.mccrispy article p:nth-of-type(5)  {
-  text-align: center;
-  padding-top: 2em;
-}
-
-.mccrispy section p {
-  font-size: 20px;
-  line-height: 24px;
-}
-
-.mccrispy form {
-  margin-top: 55px;
-  margin-bottom: 2em;
-  padding-left: 2em;
-  padding-right: 2em;
-  padding-top: 1em;
-  padding-bottom: 1em;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  background-color: rgb(231, 231, 231);
-  width: 100%;
-}
-
-.mccrispy form label {
-  width: 350px;
-  display: flex;
-  justify-content: center;
-}
-
-.mccrispy form label:first-of-type {
-  padding-top: 1em;
-  display: flex;
-  flex-direction: column;
-}
-
-.mccrispy form label input {
-  height: 1.5em;
-  font-size: 15px;
-  margin-top: 0.25em;
-  width: 350px;
-}
-
-.mccrispy form label:last-of-type {
-  padding-top: 0.5em;
-  display: flex;
-  flex-direction: column;
-}
-
-.mccrispy form button {
-  background-color: #ffbc0d;
-  width: 9em;
-  height: 3em;
-  border-radius: 5px;
-  border-style: none;
-  font-size: 14px;
-  margin-top: 1em;
-  justify-self: center;
-}
-
-/*************************/
-/* RESPONSIVE STYLING    */
-/*************************/
-@media (min-width: 700px) {
-  main section:nth-of-type(2), main section:nth-of-type(3) {
-    flex-direction: row;
-  }
-}
-
-@media (min-width: 950px) {
-  main section:nth-of-type(4) {
-    flex-direction: row;
-  }  
-  
-  .mccrispy article {
-    grid-template-columns: 40% 1fr;
-  }
-
-  .mccrispy form {
-    margin-left: 25%;
-  }
-}
-
-
-@media (min-width: 1000px) {
+@media (min-width:750px) {
   header {
     display: grid;
     width: 100%;
     justify-content: center;
     grid-template-columns: 165px auto;
     position: unset;
-    padding-top: 1em;
     background: var(--color-background);
     margin: 0 auto;
+    padding: 1em 1em;
   }
 
   header nav {
@@ -440,10 +241,87 @@ main section:last-of-type {
   header nav div, header button {
     display: none;
   }
+}
 
-  /* main */
+/* main */
+
+main {
+  margin: 0 auto;
+  padding: 0 4px;
+  width: 100%;
+}
+
+main section img {
+  width: 100%;
+}
+main section article {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  padding: 1em 0.5em;
+}
+
+main section article h2 {
+  padding: 1em 0;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+main section article a {
+  background-color: #ffbc0d;
+  color: black;
+  border: none;
+  border-radius: 4px;
+  width: 10em;
+  height: 3em;
+  margin: 0 .75rem;
+  font-size: 14px;
+  font-weight: 200;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  padding: 1em;
+}
+
+main section article p {
+  margin-bottom: 19px;
+  padding: 0 4px;
+  line-height: 24px;
+  font-size: 14px;
+  font-weight: 200;
+  letter-spacing: -.15px;
+  margin-left: .75rem;
+  margin-right: .75rem;
+}
+
+main section:first-of-type article {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:nth-of-type(2) {
+  margin: 0 auto;
+  display: flex;
+  overflow: visible;
+  flex-direction: column;
+}
+
+main section:nth-of-type(2) article p {
+  font-size: 1pc;
+}
+
+main section:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+}
+
+main section:last-of-type {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 650px) {
   main {
-    max-width: 1170px;
+    width: 1070px;
   }
 
   main section:nth-of-type(2) article,  main section:nth-child(3) article, main section:last-of-type article {
@@ -463,45 +341,192 @@ main section:last-of-type {
     display: flex;
     flex-direction: row;
   }
+}
 
+@media (max-width: 1070px) {
+  main {
+    width: 100%;
+  }
+}
+
+/* tweede pagina */
+
+.mccrispy {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-left: 9px;
+  padding-right: 9px;
+  flex-direction: column;
+  padding-top: 50px ;
+  overflow: hidden;
+  align-content: center;
+}
+
+.mccrispy article h1 {
+  font-size: 36px;
+  margin: 0 0 25px;
+  text-align: center;
+}
+
+.mccrispy img {
+  width: 100%;
+}
+
+.mccrispy img:first-of-type {
+  display: unset;
+}
+.mccrispy img:last-of-type {
+  display: none;
+}
+
+.mccrispy article p:first-of-type {
+  font-size: 14px;
+  font-weight: 200;
+  line-height: 24px;
+  text-align: center;
+}
+
+.mccrispy article p:nth-of-type(2) {
+  font-size: 20px;
+  height: 24px;
+  line-height: 24px;
+  text-align: center;
+  font-weight: 200;
+}
+
+.mccrispy article  p:nth-of-type(3) {
+  padding-bottom: 1.5em;
+}
+
+.mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(4) {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 300;
+  text-align: left;
+}
+
+.mccrispy article p:nth-of-type(5)  {
+  text-align: center;
+  padding-top: 2em;
+}
+
+.mccrispy section p {
+  font-size: 20px;
+  line-height: 24px;
+}
+
+.mccrispy form {
+  margin-top: 55px;
+  margin-bottom: 2em;
+  padding-left: 2em;
+  padding-right: 2em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgb(231, 231, 231);
+  width: 100%;
+}
+
+.mccrispy form label {
+  width: 350px;
+  display: flex;
+  justify-content: center;
+}
+
+.mccrispy form label:first-of-type {
+  padding-top: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mccrispy form label input {
+  height: 1.5em;
+  font-size: 15px;
+  margin-top: 0.25em;
+  width: 350px;
+}
+
+.mccrispy form label:last-of-type {
+  padding-top: 0.5em;
+  display: flex;
+  flex-direction: column;
+}
+
+.mccrispy form button {
+  background-color: #ffbc0d;
+  width: 9em;
+  height: 3em;
+  border-radius: 5px;
+  border-style: none;
+  font-size: 14px;
+  margin-top: 1em;
+  justify-self: center;
+}
+
+@media(min-width: 750px) {
   .mccrispy {
-    width: 1070px;
-
+    padding: 0 1em;
+    width: 100%;
+    padding-top: 50px;
   }
 
   .mccrispy article {
     display: grid;
-    grid-template-columns: 75% 1fr;
+    flex-direction: row;
+    grid-template-columns: 66% 1fr;
   }
 
-  .mccrispy article h1 {
+  .mccrispy article h1, .mccrispy article p {
     text-align: left;
-    align-self: center;
-    display: block;
-    grid-column: 2/3;
-  }
-
-  .mccrispy article p {
-    text-align: left;
-    grid-column: 2/3;
   }
 
   .mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(2), .mccrispy article p:nth-of-type(1) {
     margin-top: 1em;
     text-align: left;
+    overflow-wrap: break-word;
+  }
+  .mccrispy h1, .mccrispy article p:nth-of-type(4), .mccrispy article p:nth-of-type(3), .mccrispy article p:nth-of-type(2), .mccrispy article p:nth-of-type(1) {
+    grid-column: 2/3;
+  }
+  
+  .mccrispy article div:last-of-type {
+    margin: 0 auto;
+    min-height: 446px;
   }
 
-  .mccrispy article img {
-    align-self: flex-start;
-    grid-column: 1/1;
+  .mccrispy img {
+    width: 100%;
+    grid-column: 1/2;
     grid-row: 1/6;
-    flex: 1 1 67%;
+  }
+
+  .mccrispy img:first-of-type {
+    display: unset;
+  }
+  .mccrispy img:last-of-type {
+    display: none;
   }
 
   .mccrispy form {
     width: 450px;
     margin-left: 25%;
   }
-
 }
 
+@media (max-width:625px) {
+  .mccrispy img:first-of-type {
+    display: none;
+  }
+  .mccrispy img:last-of-type {
+    display: unset;
+  }
+}
+
+@media (min-width: 1070px) {
+  .mccrispy {
+    width: 1070px;
+  }
+}
