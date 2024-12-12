@@ -197,5 +197,6 @@ Nb. Door *open* toe te voegen aan een *details* element kun je deze standaard op
   4. responsiveness opdrachten
   5. https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label
   6. https://stackoverflow.com/questions/6393827/can-i-nest-a-button-element-inside-an-a-using-html5
+  7. https://cubic-bezier.com/#.43,-0.52,.45,1
 
 </details>

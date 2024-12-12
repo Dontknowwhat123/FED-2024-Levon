@@ -48,11 +48,15 @@ header > a > img {
 }
 
 header > a img {
-  transition: 1s;
+  transition: transform 
+  1s 
+  cubic-bezier(.38, -0.83, .47, 1.56); /*bron: https://cubic-bezier.com/#.43,-0.52,.45,1*/
 }
 
 header > a img:hover {
-  transition: 1s;
+  transition: transform 
+  1s 
+  cubic-bezier(.38, -0.83, .47, 1.56); /*bron: https://cubic-bezier.com/#.43,-0.52,.45,1*/
   transform: rotate(360deg);
 }
 
